@@ -1,6 +1,6 @@
 class Formatter {
   static capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string[0].toUpperCase() + string.slice(1);
   }
   
   static sanitize(string) {
@@ -11,7 +11,7 @@ class Formatter {
     const excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
     let words = string.split(' ');
     let result = [];
-    result.push(this.capitalize(words.splice(0,1)[0]));
+    result.push(words.splice(0,1).capitalize(words[0]));
     for (const word of words) {
       if (excluded.includes(word)) {
         result.push(word);
