@@ -8,10 +8,10 @@ class Formatter {
   }
   
   static titleize(string) {
+    let result = [];
     const excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
     let allWords = string.split(' ');
-    let result = [];
-    result.push(allWords[0].capitalize);
+    result.push(this.capitalize(allWords[0]));
     let allButFirst = allWords.slice(1);
     for (const word of allButFirst) {
       if (excluded.includes(word)) {
