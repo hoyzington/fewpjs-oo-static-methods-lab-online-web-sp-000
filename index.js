@@ -13,7 +13,7 @@ class Formatter {
     let result = [];
     result.push(allWords[0].capitalize);
     let allButFirst = allWords.slice(1);
-    for (const word of  allButFirst) {
+    for (const word of allButFirst) {
       if (excluded.includes(word)) {
         result.push(word);
       } else {
