@@ -11,7 +11,7 @@ class Formatter {
     let result = [];
     const excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
     let words = string.split(' ');
-    result.push(this.capitalize(words.shift));
+    result.push(this.capitalize(words.shift()));
     for (const word of words) {
       if (excluded.includes(word)) {
         result.push(word);
